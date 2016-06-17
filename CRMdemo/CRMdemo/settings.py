@@ -70,24 +70,30 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'CRMdemo.wsgi.application'
-
+PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'crmproject',
+#         'USER': 'root',
+#         'PASSWORD': 'quesadilla21',
+#         'HOST': 'localhost',
+#         'PORT': '',
+
+
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'crmproject',
-        'USER': 'root',
-        'PASSWORD': 'quesadilla21',
-        'HOST': 'localhost',
-        'PORT': '',
-
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(PROJECT_DIR, 'crmproject.db'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -111,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-MX'
 
 TIME_ZONE = 'UTC'
 
@@ -124,10 +130,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-
+PATH = '/home/css/CRMdemo/CRMdemo'
 STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR, "static/")
-STATICFILES_DIRS = ( '/home/zardain/CRMdemo/CRMdemo/static/', )
+STATICFILES_DIRS = ( '/home/css/CRMdemo/CRMdemo/static/', )
 
 
 LOGIN_URL = reverse_lazy('home')
