@@ -133,7 +133,8 @@ USE_TZ = True
 PATH = '/home/css/CRMdemo/CRMdemo'
 STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR, "static/")
-STATICFILES_DIRS = ( '/home/css/CRMdemo/CRMdemo/static/', )
+#STATICFILES_DIRS = ( '/home/css/CRMdemo/CRMdemo/static/', )
+STATICFILES_DIRS = ( '/home/zardain/crm/CRM-demo/static/', )
 
 
 LOGIN_URL = reverse_lazy('home')
