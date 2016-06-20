@@ -18,7 +18,7 @@ class client(models.Model):
     nombre_usuario = models.CharField(max_length=100 )
     telefono = models.IntegerField(blank=True)
     correo_electronico = models.EmailField()
-    contraseña = models.CharField(max_length=50)
+    password = models.CharField(max_length=50)
 
     def __unicode__(self):
     	return self.nombre_cliente
